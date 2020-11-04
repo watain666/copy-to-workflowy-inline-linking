@@ -1,32 +1,24 @@
 {
   "manifest_version": 2,
-  "name": "Copy to Workflowy",
-  "version": "1.4",
+  "name": "Copy to Workflowy Inline Linking",
+  "version": "0.1.0",
   "description": "Copies the current tab's title and address so that it can be pasted into Workflowy.",
   "icons": {
-    "48": "icons/workflowy-48.png"
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
   },
   "browser_action": {
-    "default_icon": {
-      "19": "icons/workflowy-19.png",
-      "38": "icons/workflowy-38.png"
-    },
-    "default_title": "Copy to Workflowy"
+    "default_title": "Copy to Workflowy Inline Linking"
   },
-  "content_scripts": [{
-    "matches": [
-      "<all_urls>"
-    ],
-    "js": [
-      "content.js"
-    ]
-  }],
   "background": {
     "scripts": [
       "background.js"
     ]
   },
   "permissions": [
+    "tabs",
     "clipboardWrite",
     "notifications",
     "storage"
@@ -34,9 +26,9 @@
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Ctrl+Shift+C"
+        "default": "Alt+W"
       },
-      "description": "Copy to Workflowy"
+      "description": "Copy to Workflowy Inline Linking"
     }
   },
   "options_ui": {
